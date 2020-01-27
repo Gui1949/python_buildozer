@@ -1,0 +1,11 @@
+Gerar o APK release:
+- buildozer android release
+
+Gerar a key:
+- keytool -genkey -v -keystore <caminho onde ficará a key> -alias <nome do app> -storepass <storepass da key> -keypass <keypass da key> -keyalg RSA -validity 14000
+
+Assinar APP:
+- jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -signedjar <nome do arquivo apk assinado> -storepass <storepass da key> -keypass <keypass da key> -keystore <caminho da key> <nome do arquivo apk a assinar> <nome do app>
+
+ZipAlign:
+- zipalign -v 4  <nome do arquivo apk assinado>  <nome do arquivo apk com zipalign>
