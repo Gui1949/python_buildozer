@@ -1,0 +1,77 @@
+Peguei do cadernolaboratorio, melhor site para buildozer.
+
+Configurando o Python3
+
+sudo apt-get install python3-setuptools
+
+Insira a seguinte linha no arquivo /home/.bashrc (nano .bashrc)
+
+alias python=python3
+
+Execute o script .bashrc source .bashrc .
+Instale utilitários que serão necessários
+
+—-
+
+sudo apt-get install -y \
+python3-pip \ 
+build-essential \ 
+git \ 
+python3 \ 
+python3-dev \ 
+ffmpeg \ 
+libsdl2-dev \ 
+libsdl2-image-dev \ 
+libsdl2-mixer-dev \ 
+libsdl2-ttf-dev \ 
+libportmidi-dev \ 
+libswscale-dev \ 
+libavformat-dev \ 
+libavcodec-dev \ 
+zlib1g-dev 
+
+sudo apt-get install -y \ 
+libgstreamer1.0 \ 
+gstreamer1.0-plugins-base \ 
+gstreamer1.0-plugins-good 
+
+sudo apt-get install libltdl-dev
+
+Instale o Kivy
+
+sudo add-apt-repository ppa:kivy-team/kivy 
+sudo apt-get update 
+sudo apt-get install python3-kivy 
+sudo apt-get install -y ccache libncurses5:i386 
+libstdc++6:i386 libgtk2.0-0:i386 libpangox-1.0-0:i386 
+libpangoxft-1.0-0:i386 libidn11:i386 unzip zlib1g-dev zlib1g:i386
+
+Instalação do OpenJDK
+
+Precisamos do openjdk-8. Não instale versões mais atuais.
+
+sudo apt-get install openjdk-8-jdk 
+sudo apt-get install openjdk-8-dbg
+
+Instalando o gradle
+
+sudo add-apt-repository ppa:cwchien/gradle 
+sudo apt-get update 
+sudo apt upgrade gradle
+
+Instalando o buildozer
+
+sudo pip3 install buildozer
+
+Instalando um editor de programas
+
+sudo apt-get install geany
+
+Instalando o cython 0.28.5
+
+sudo pip3 install cython==0.28.5
+
+Estabelecendo do openjdk-8 como default
+
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
